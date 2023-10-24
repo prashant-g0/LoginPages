@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <title>Login page</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: url("background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .formbox{
+            position: relative;
+            width: 400px;
+            height: 450px;
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(3px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            font-size: 2em;
+            color: white;
+            text-align: center;
+        }
+
+        .inputbox{
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid whitesmoke;
+        }
+
+        .inputbox label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 1em;
+            pointer-events: none;
+        }
+
+        input:focus ~ label,
+        input:valid ~ label {
+            top: -5px;
+        }
+
+        .inputbox input{
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 0 35px 0 5px;
+            color: white;
+        }
+
+        .inputbox ion-icon{
+            position: absolute;
+            right: 8px;
+            color: white;
+            font-size: 1.2em;
+            top: 20px;
+        }
+
+        .forget{
+            margin: 15px 0 15px;
+            font-size: .9em;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .forget label input{
+            margin-right: 3px;
+        }
+
+        .forget label a{
+            color: aliceblue;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        .forget label a:hover{
+            text-decoration: underline;
+        }
+
+        button{
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .register{
+            font-size: .9em;
+            color: white;
+            text-align: center;
+            margin: 25px 0 10px;
+        }
+
+        .register p a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="formbox">
+            <div class="formvalue">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember me <a href="#">Forgot password?</a></label>
+                        
+                    </div>
+                    <button>Log in</button>
+                    <div class="register">
+                        <p>Don't have a account? <a href="#">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
